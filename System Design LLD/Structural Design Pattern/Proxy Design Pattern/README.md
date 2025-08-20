@@ -2,8 +2,8 @@
 
 -> Allows us to provide a surrogate or placeholder for another object to control access to it. 
 
--> Proxy acts as an intermediarty between client and the real object, intercepting all requests and performing 
-   any necessary operations brfore/after forwarding the request to actual object.
+-> Proxy acts as an intermediarty between client and the real object, **intercepting all requests and performing 
+   any necessary operations brfore/after forwarding the request to actual object.**
    
 -> Adding this intermediarty layer can provide many benefits such as lazy loading, access control and cahcing.
 
