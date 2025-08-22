@@ -101,3 +101,17 @@ int main() {
 }
 
 ```
+
+#### CHECKLIST:
+Main Class
+- Private constructor → force creation via builder.
+- Friend builder class → so builder can set private fields.
+- Holds data only (state/fields, not build steps).
+- Read-only methods (e.g., str(), getX() but no setX()).
+- static create() → entry point to builder.
+
+Builder Class
+- Has a copy of product (Query) inside.
+- Setter-like methods for step-by-step config (select(), from(), etc.).
+- Return *this in each setter for chaining.
+- build() method → returns the final product.
