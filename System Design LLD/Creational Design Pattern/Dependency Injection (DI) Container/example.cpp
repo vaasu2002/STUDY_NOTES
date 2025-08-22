@@ -81,3 +81,33 @@ public:
         return std::static_pointer_cast<T>(it->second());
     }
 };
+
+// Example
+class ILogger {
+    public:
+    
+    virtual ~ILogger() = default;
+    virtual void log(const std::string& message) = 0;
+};
+
+class ConsoleLogger : public ILogger {
+    public:
+    
+    ConsoleLogger() {}
+    void log(const std::string& message) override {
+        std::cout << "[LOG]: " << message << std::endl;
+    }
+};
+
+
+
+int main() {
+    DIContainer container;
+
+
+    container.registerType<ILogger, ConsoleLogger>(DIContainer::Lifetime::Singleton);
+    auto logger = container.resolve<ILogger>();
+    logger->log("I am logging from main function of the code.");
+
+    return 0;
+}
