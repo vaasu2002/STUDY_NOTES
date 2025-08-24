@@ -21,3 +21,16 @@
   - Handles the mechanics of reliable delivery. Generating actually delivary payloads(packets).
   - Deals with how to deliver data fully in order, without error and duplicatation on an unreliable medium.
   - Breaking data into segments and adding sequence number to it, using ACK gets to know about missing packets.
+
+### TCP (Transmission Control Protocol)
+- The TCP (Transmission Control Protocol) is considered the most reliable way machines communicate over a network.
+- HTTP is just the data stream (application messages, like requests and responses).
+- TCP takes that data stream and breaks it into segments (packets) so it can be reliably delivered over the network.
+  - Data is divided into small chunks called packets (or segments in TCP).
+  - Each packet is given a sequence number, which helps the receiver know the correct order of packets and detect if any are missing.
+  - When the receiver successfully gets a packet, it sends an ACK (acknowledgment) back to the sender. The ACK usually contains the next expected sequence number.
+  - If a packet is lost, the receiver will not send an ACK for that sequence number. The sender notices that an ACK is missing (either through a timeout or duplicate ACKs).
+  -  The sender then retransmits the missing packet to ensure reliable delivery.The sender then retransmits the missing packet to ensure reliable delivery.
+- **3 WAY HANDSHAKE** is done to establish the virtual connection(between sender and receiver).
+  - The client sends a SYN packet to the server to initiate a connection.
+  - 
