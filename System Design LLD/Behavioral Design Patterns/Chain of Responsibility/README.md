@@ -1,6 +1,6 @@
 # Chain of Responsibility
 
-When we have a event that needs to be passed thought multiple handlers. This can be done by a series of 'if' statements. It works but it's not ideal. The main problem here is resubility, if we want to use the same condition way of dealing somewhere else we can't.
+When we have a event that needs to be passed thought multiple handlers(situations). This can be done by a series of 'if' statements. It works but it's not ideal. The main problem here is resubility, if we want to use the same condition way of dealing somewhere else we can't.
 
 Instead of having a big cluster of ```if``` statements, we can express it as a chain of objects. Each of these objects will worry about only one particular situation. There can be like if object can handle the situtation if will process and can either stop the chain forwarding or just send forward to let other also processing things on event.
 
