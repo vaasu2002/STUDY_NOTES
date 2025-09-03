@@ -13,9 +13,6 @@
  * Strategy Design Pattern
  * When there can be multiple ways/algorithm to perform an action or do somethings.
  * We encapsulate the different ways in specific classes. [Thus following SRP]
- * Morning face routine - Facewash > Vit C serum > Face cream > Sun screen
-
-Night face routine - Facewash > Retinol > Face cream
 */ 
 
 class File;
