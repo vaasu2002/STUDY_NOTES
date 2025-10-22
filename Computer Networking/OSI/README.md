@@ -44,8 +44,8 @@ NOTE ->
      const data = { username: "alice", password: "wonderland123" }; // js object
      const jsonString = JSON.stringify(data); // <-- Serialization happens here
      ```
-- Presentation Layer 
-  -  Translates data between the application and network
+- Presentation Layer  / Syntax Layer
+  -  Translates data between the application and the network [ DATA TRANSLATOR FOR NETWORK]
   -  Conceptually handles how data is represented, encrypted, and encoded during transmission.
   -  Ensures that data from one system can be properly understood by another system.
   -  TLS encrypts the serialized JSON data
