@@ -10,7 +10,9 @@ The OSI model provides layers of abstraction. As an application developer, you c
 
 ### What is a Protocol?
 -> Set of rules and guidelines that govern the communication betweem difference entiries in a system.
+
 -> Defines how data is transmitted, received and interpreted between devices.
+
 -> The aim of network protocol is to facilitate the exchange of data between devices connected in a network.
 
 Protocol operates at different layer of the network stack, with **each layer responsible for specific aspect of communication.**
@@ -19,6 +21,7 @@ Protocol operates at different layer of the network stack, with **each layer res
 -> Defines the addressing(assigning unique logical address - IP address) and 
 -> routing mechanisms(determines the most effective path for data packets to travel across) multiple networks to reach final destination)
 -> Data unit = packets
+
 **TCP/UDP (tranmission control protocol/user datagram protocol) - LAYER 4 [TRANSPORT LAYER]**
 -> Transportt layer protocol manages the connection between devices.
 -> Provides reliable connection-oriented data delivery. [TCP]
@@ -29,3 +32,24 @@ Protocol operates at different layer of the network stack, with **each layer res
 NOTE ->
 - Port information is with  Transport Layer
 - IP information is with Network Layer
+
+
+
+- Application Layer
+  -  Provides network services to application.
+  -  HTTP, FTP, SMTP, DNS, SNMP, Telnet, SSH
+  -  Interacts directly with the software application.
+  -  Application receives structured data (e.g., Python dict, JavaScript object). They are serialized into a text or binary format like JSON, XML, or Protobuf. Sending that serialized text as part of an HTTP request or response body
+  -  ```js
+     const data = { username: "alice", password: "wonderland123" }; // js object
+     const jsonString = JSON.stringify(data); // <-- Serialization happens here
+     ```
+- Presentation Layer 
+  -  Translates data between the application and network
+  -  Conceptually handles how data is represented, encrypted, and encoded during transmission.
+  -  Ensures that data from one system can be properly understood by another system.
+  -  TLS encrypts the serialized JSON data
+  -  For HTTPS: Turning plaintext HTTP data (which may include JSON) into encrypted bytes.
+ 
+- Session Layer
+- Transport Layer
